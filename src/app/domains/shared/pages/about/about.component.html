@@ -1,7 +1,9 @@
 <div>
   <h1 class="text-lg font-bold">About</h1>
   <p class="texr-xs">Lorem ipsum dolor <span highlight> sit amet consectetur adipisicing elit.</span>  Hic repellendus facilis magni odit nulla consequuntur accusantium tenetur consequatur, suscipit pariatur ad id a nostrum deserunt quisquam? Delectus saepe nulla error.</p>
-  <p class="texr-xs">Numero de clientes <app-counter [duration]="duration()" [message]="message()" *ngIf="duration() > 0"/></p>
+  <p class="texr-xs">Numero de clientes @if (duration() > 0) {
+    <app-counter [duration]="duration()" [message]="message()"/>
+  }</p>
   <div>
     <app-wave-audio audioUrl="assets/audio.mp3"></app-wave-audio>
   </div>
